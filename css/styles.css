@@ -1,11 +1,21 @@
 body {
     font-family: 'Montserrat' sans-serif;
 }
-ul {
+ul,ol {
     list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 a {
     text-decoration: none;
+}
+p,h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+button {
+    cursor: pointer;
 }
 .visually-hidden {
     position: absolute;
@@ -43,8 +53,17 @@ a {
     letter-spacing: -0.02em;
     color: #111
 }
+.container {
+    width: 1166px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
 /* _________header________ */
-.header {}
+.header {
+    padding-top: 24px;
+    padding-bottom: 32px;
+}
 
 .header-navigation {}
 
@@ -72,6 +91,10 @@ a {
     letter-spacing: -0.02em;
     color: #111;
 }
+.header-menu-link:hover,
+.header-menu-link:focus {
+    color: #fd9222;
+}
 
 .header-social-list {}
 
@@ -81,15 +104,20 @@ a {
 
 /* _________hero_______ */
 .hero {
-    background-color: rgba(17, 17, 17, 0.6);
+    padding-bottom: 80px;
 }
-
+.hero-container {
+    background-color: rgba(17, 17, 17, 0.6);
+    border-radius: 30px;
+    padding: 380px 40px 40px 40px;
+}
 .hero-title {
     font-weight: 500;
     font-size: 28px;
     line-height: 1.21;
     letter-spacing: -0.03em;
     color: #fff;
+    margin-bottom: 32px;
 }
 
 .hero-btn {
@@ -114,21 +142,32 @@ a {
 /* _______benefits______ */
 .benefits {
     background-color: #1e1823;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .benefits-list {}
 
 .benefits-item {}
 
 .benefits-subtitle {
+    font-weight: 600;
+    font-size: 18px;
     color: #fff;
 }
 
 .benefits-item-text {
-    color: rgba(255, 255, 255, 0.7);
+font-weight: 400;
+font-size: 14px;
+line-height: 1.28;
+letter-spacing: -0.02em;
+color: rgba(255, 255, 255, 0.7);
 }
 
 /* ________taste___ */
-.taste {}
+.taste {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
 .taste-title {
 
