@@ -14,6 +14,9 @@ p,h1,h2,h3,h4,h5,h6 {
     margin-top: 0;
     margin-bottom: 0;
 }
+img {
+    display: block;
+}
 button {
     cursor: pointer;
 }
@@ -64,8 +67,15 @@ button {
     padding-top: 24px;
     padding-bottom: 32px;
 }
+.header-container {
+    display: flex;
+    gap: 90px;
 
-.header-navigation {}
+}
+.header-navigation {
+    display: flex;
+    flex-grow: 1;
+}
 
 .header-logo {
     font-weight: 700;
@@ -73,6 +83,8 @@ button {
     line-height: 1.11;
     letter-spacing: -0.03em;
     color: #111;
+    display: flex;
+    align-items: center;
 }
 .header-logo-italic {
     font-style: italic;
@@ -80,7 +92,11 @@ button {
 
 .header-image {}
 
-.header-menu-list {}
+.header-menu-list {
+    display: flex;
+    gap: 24px;
+    margin-left: auto;
+}
 
 .header-menu-item {}
 
@@ -96,7 +112,10 @@ button {
     color: #fd9222;
 }
 
-.header-social-list {}
+.header-social-list {
+    display: flex;
+    gap: 14px;
+}
 
 .header-social-item {}
 
@@ -118,18 +137,31 @@ button {
     letter-spacing: -0.03em;
     color: #fff;
     margin-bottom: 32px;
+    max-width: 484px;
 }
 
 .hero-btn {
     font-weight: 600;
     font-size: 14px;
     color: #fff;
+    background: #fd9222;
+    border-radius: 100px;
+    border: none;
+    padding: 14px 40px;
+    margin-right: 14px;
 }
-
+.hero-buttons {
+    display: flex;
+    align-items: center;
+}
 .hero-link {
     font-weight: 600;
     font-size: 14px;
     color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 100px;
+    padding: 14px 40px;
 }
 
 .hero-scroll {
@@ -138,6 +170,7 @@ button {
     line-height: 1.28;
     letter-spacing: -0.03em;
     color: #fff;
+    margin-left: auto;
 }
 /* _______benefits______ */
 .benefits {
@@ -145,22 +178,29 @@ button {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.benefits-list {}
+.benefits-list {
+    display: flex;
+    padding: 0 18px;
+    gap: 88px;
+}
 
-.benefits-item {}
+.benefits-item {
+    width: calc((100% - 2 * 88px) / 3);
+}
 
 .benefits-subtitle {
     font-weight: 600;
     font-size: 18px;
     color: #fff;
+    margin-bottom: 18px;
 }
 
 .benefits-item-text {
-font-weight: 400;
-font-size: 14px;
-line-height: 1.28;
-letter-spacing: -0.02em;
-color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* ________taste___ */
@@ -170,19 +210,49 @@ color: rgba(255, 255, 255, 0.7);
 }
 
 .taste-title {
-
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111;
+    /* max-width: 412px; */
+    margin-bottom: 28px;
 }
 .title-colored {
     color: #fd9222;
 }
 .taste-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #111;
+    max-width: 486px;
+    margin-bottom: 50px;
 }
 
-.taste-list {}
+.taste-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+}
 
-.taste-item {}
+.taste-item {
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 15px;
+    width: calc((100% - 3 * 32px) / 4);
+    text-align: center;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
 
-.taste-image {}
+.taste-image {
+    margin: 0 auto;
+    margin-bottom: 36px;
+}
 
 .taste-subtitle {
     font-size: 14px;
@@ -211,17 +281,52 @@ color: rgba(255, 255, 255, 0.7);
 .made-item {
 }
 /* _______products_______ */
-.products {}
+.products {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
-.products-title {}
+.products-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111;
+    margin-bottom: 50px;
+}
 
-.products-list {}
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 18px;
+}
 
-.products-item {}
+.products-item {
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 15px;
+    background-color: #fff;
+    width: calc ((100% - 3 * 18px) / 4);
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 
-.products-image {}
+.products-image {
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
 
 .products-subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 2px;
+
 }
 
 .products-text {
@@ -229,12 +334,17 @@ color: rgba(255, 255, 255, 0.7);
     line-height: 1.17;
     letter-spacing: -0.02em;
     color: rgba(17, 17, 17, 0.7);
+    margin-bottom: 18px;
 }
 
 .products-btn {
     font-weight: 600;
     font-size: 14px;
     color: #111;
+    background-color: #fafafa;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 100px;
+    padding: 8px 20px;
 }
 
 /* _________sallers_______ */
