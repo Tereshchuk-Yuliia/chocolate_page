@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat' sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 ul,ol {
     list-style-type: none;
@@ -107,10 +107,10 @@ button {
     letter-spacing: -0.02em;
     color: #111;
 }
-.header-menu-link:hover,
+/* .header-menu-link:hover,
 .header-menu-link:focus {
     color: #fd9222;
-}
+} */
 
 .header-social-list {
     display: flex;
@@ -121,6 +121,10 @@ button {
 
 .header-social-link {}
 
+.header-social-link:hover,
+.header-social-link:focus {
+    color: #fd9222;
+}
 /* _________hero_______ */
 .hero {
     padding-bottom: 80px;
@@ -139,7 +143,10 @@ button {
     margin-bottom: 32px;
     max-width: 484px;
 }
-
+.hero-buttons {
+    display: flex;
+    align-items: center;
+}
 .hero-btn {
     font-weight: 600;
     font-size: 14px;
@@ -150,10 +157,6 @@ button {
     padding: 14px 40px;
     margin-right: 14px;
 }
-.hero-buttons {
-    display: flex;
-    align-items: center;
-}
 .hero-link {
     font-weight: 600;
     font-size: 14px;
@@ -163,7 +166,6 @@ button {
     border-radius: 100px;
     padding: 14px 40px;
 }
-
 .hero-scroll {
     font-weight: 500;
     font-size: 14px;
@@ -216,8 +218,9 @@ button {
     letter-spacing: -0.03em;
     text-transform: uppercase;
     text-align: center;
+    margin: 0 auto;
     color: #111;
-    /* max-width: 412px; */
+    max-width: 412px;
     margin-bottom: 28px;
 }
 .title-colored {
@@ -231,9 +234,9 @@ button {
     text-align: center;
     color: #111;
     max-width: 486px;
+    margin: 0 auto;
     margin-bottom: 50px;
 }
-
 .taste-list {
     display: flex;
     flex-wrap: wrap;
@@ -248,6 +251,12 @@ button {
     padding-top: 28px;
     padding-bottom: 28px;
 }
+.taste-item:nth-child(4n+1) {
+    background-color: #fd9222;
+}
+.taste-item:nth-child(4n+3) {
+background: #1e1823;
+}
 
 .taste-image {
     margin: 0 auto;
@@ -261,10 +270,12 @@ button {
     color: #111;
 }
 /* _______made_____ */
-.made {}
+.made {
+    padding-top: 120px;
+}
 
 .made-title {
-
+    margin-bottom: 50px;
 }
 
 .made-image {}
@@ -349,40 +360,82 @@ button {
 
 /* _________sallers_______ */
 
-.sallers {}
+.sallers {
+    padding-bottom: 120px;
+}
 
-.sallers-title {}
+.sallers-title {
+    margin-bottom: 50px;
+}
 
 .title-colored {}
 
-.sallers-list {}
+.sallers-list {
+    display: flex;
+    gap: 16px;
+}
 
-.sallers-item {}
+.sallers-item {
+    width: calc((100 - 2 * 16px)/ 3);
+}
 
 .sallers-image {}
 
 .sallers-subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #111;
+    padding: 28px 0;
+    text-align: center;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-top: none;
+    border-radius: 0 0 15px 15px;
 }
 
 
 /* _________reviews_____ */
 
-.reviews {}
+.reviews {
+    padding-bottom: 120px;
+}
 
-.reviews-title {}
+.reviews-title {
+    margin-bottom: 90px;
+}
 
-.reviews-list {}
+.reviews-list {
+    display: flex;
+    gap:28px;
+    margin-bottom: 50px;
+}
 
-.reviews-item {}
+.reviews-item {
+    width: calc((100% - 2 * 28px) / 3);
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+    padding: 56px 24px 24px 24px;
+}
 
 .reviews-image {}
 
 .reviews-subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
     text-align: center;
     color: #111;
+    margin-bottom: 24px;
 }
 
 .reviews-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
     text-align: center;
     color: rgba(17, 17, 17, 0.7);
 }
@@ -391,6 +444,13 @@ button {
     font-weight: 600;
     font-size: 18px;
     color: #111;
+    border: 1px solid #fd9222;
+    border-radius: 100px;
+    padding: 14px 40px;
+    width: 222px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
 }
 /* ________footer______ */
 .footer {
