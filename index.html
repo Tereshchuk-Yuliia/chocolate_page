@@ -19,7 +19,7 @@
                 <ul class="header-menu-list">
                     <li class="header-menu-item"><a class="header-menu-link" href="">Home</a></li>
                     <li class="header-menu-item"><a class="header-menu-link" href="#made">How it’s made?</a></li>
-                    <li class="header-menu-item"><a class="header-menu-link" href="">Chocolate is loved</a></li>
+                    <li class="header-menu-item"><a class="header-menu-link" href="#reviews">Chocolate is loved</a></li>
                 </ul>
             </nav>
             <ul class="header-social-list">
@@ -36,8 +36,8 @@
                     <h1 class="hero-title">Treat yourself or a loved one to our finest ingredients for a moment of pure delight!</h1>
                 <div class="hero-buttons">
                         <button class="hero-btn" type="button">Buy now</button>
-                        <a class="hero-link" href="">How it’s made</a>
-                        <a class="hero-scroll" href="">scroll down</a>
+                        <a class="hero-link" href="#made">How it’s made</a>
+                        <a class="hero-scroll" href="#footer">scroll down</a>
                 </div>
                 </div>
 </div>
@@ -211,7 +211,7 @@
                     </ul>
                 </div>
         </section>
-        <section class="reviews">
+        <section class="reviews" id="reviews">
                 <div class="container">
                 <h2 class="reviews-title title"><span class="title-colored">chocolate</span> is loved</h2>
                 <ul class="reviews-list">
@@ -237,7 +237,7 @@
                     </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
 <div class="container">
                     <div class="footer-top">
                         <p class="footer-title"><span class="title-colored">Chocolate</span> a delicious cure for a bad day</p>
@@ -278,96 +278,28 @@
     </footer>
     <div class="backdrop">
         <div class="modal">
-            <button type="button" class="modal-close"></button>
+            <button type="button" class="modal-close">x</button>
+            <p class="modal-title title">LEAVE A REVIEW ABOUT <span class="title-colored">OUR CHOCOLATE</span></p>
+        <form class="modal-form">
+            <div class="modal-field">
+                <label for="user-name" class="modal-label">Name</label>
+                <div class="modal-field-wrap">
+                    <input type="text" name="user-name" class="modal-input" placeholder="Enter name" required>
+                    <svg class="modal-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-user-1"></use>
+                    </svg>
+                </div>
+            </div>
+            <input type="email" name="user-email" class="modal-input" placeholder="Enter email">
+            <input type="tel" name="user-tel" class="modal-input" placeholder="Enter tel" required >
+            <div class="modal-field">
+                <label for="user-coment">Comment</label>
+            <textarea name="user-coment" id="user-comen" class="modal-text" placeholder="Enter text"></textarea>
+            </div>
+            <button type="submit" class="modal-btn">Send</button>
+        </form>
         </div>
     </div>
-
-
-    <section class="about-us">
-    <div class="conteiner conteiner-about">
-        <div class="Rectangle">
-            <h2 class="about-title">About Us</h2>
-            <ul class="about-list">
-                <li class="about-item">Welcome to our premium watch collection, where luxury and style meet functionality and precision. Our selection of
-                timepieces embodies the very best in Swiss craftsmanship and engineering, ensuring that you'll always have a reliable
-                and stylish accessory on your wrist.</li>
-                <li class="about-item">At our premium watch collection, we believe that a watch is more than just a timekeeping device – it's a statement piece
-                that reflects your personality and style. So why settle for anything less than the best?</li>
-            </ul>
-            <button type="button" class="about-btn">View catalog</button>
-        </div>
-        <div class="Rectangle2">
-            <img src="./images/Rectangle.jpg" alt="watch">
-        </div>
-    </div>
-    </section>
-
-    <section class="section reviews" id="reviews">
-  <div class="container">
-    <h2 class="reviews-title">Reviews</h2>
-    <ul class="reviews-list">
-      <li class="reviews-item">
-        <img
-          srcset="/img/img-reviews/jon1x.png 1x, /img/img-reviews/jon2x.png 2x"
-          src="/img/img-reviews/jon1x.png"
-          alt="John Wax"
-          width="56"
-          height="56"
-        />
-        <div class="reviews-descr">
-          <h3 class="reviews-subtitle">John Wax</h3>
-          <p class="reviews-text">
-            Buying a watch from was the best choice for me. The design is
-            perfectly combined with high quality materials. The strap fits
-            nicely on the hand, and the mechanism works flawlessly.
-          </p>
-        </div>
-      </li>
-      <li class="reviews-item">
-        <img
-          srcset="
-            /img/img-reviews/Victoria1x.png 1x,
-            /img/img-reviews/Victoria2x.png 2x
-          "
-          src="/img/img-reviews/Victoria1x.png"
-          alt="Victoria Romashenko"
-          width="56"
-          height="56"
-        />
-        <div class="reviews-descr">
-          <h3 class="reviews-subtitle">Victoria Romashenko</h3>
-          <p class="reviews-text">
-            Can't take my eyes off my watch from. Every time I put it on, it is
-            admired by those around me. The build quality and attention to
-            detail make it a real gem among my accessories.
-          </p>
-        </div>
-      </li>
-      <li class="reviews-item">
-        <img
-          srcset="
-            /img/img-reviews/Anastasia1x.png 1x,
-            /img/img-reviews/Anastasia2x.png 2x
-          "
-          src="/img/img-reviews/Anastasia1x.png"
-          alt="Anastasia Trachuk"
-          width="56"
-          height="56"
-        />
-        <div class="reviews-descr">
-          <h3 class="reviews-subtitle">Anastasia Trachuk</h3>
-          <p class="reviews-text">
-            My watch from is a real masterpiece. Every detail impresses with the
-            high quality of execution. Special features like [specify features]
-            make it an indispensable companion in my daily life.
-          </p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
 
 </body>
 </html>
