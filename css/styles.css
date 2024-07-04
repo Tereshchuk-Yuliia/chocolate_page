@@ -60,9 +60,9 @@ button {
     color: #111
 }
 .container {
-    width: 1166px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 375px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
 }
 /* _________header________ */
@@ -233,18 +233,26 @@ font-size: 14px;
 /* _______benefits______ */
 .benefits {
     background-color: #1e1823;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.benefits-icon {
+    fill:#fd9222;
+    position: absolute;
 }
 .benefits-list {
     display: flex;
-    padding: 0 18px;
-    gap: 88px;
+    flex-wrap: wrap;
+    gap:20px;
+    /* padding: 0 18px;
+    gap: 88px; */
 }
-
 .benefits-item {
-    width: calc((100% - 2 * 88px) / 3);
-    position: relative;
+    padding-right: 28px;
+    /* width: calc((100% - 2 * 88px) / 3);
+    position: relative; */
 }
 .benefits-item.current::after{
     content: '';
@@ -738,13 +746,16 @@ background: #1e1823;
     background-color: rgba(255, 255, 255, 0.3);
     position: fixed;
     top: 0;
-    /* opacity: 0;
+    opacity: 0;
     visibility: hidden;
-    pointer-events: none; */
-
+    pointer-events: none;
 }
+/* .is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+} */
 .modal {
-
     position: absolute;
     width: 517px;
     height: 794px;
@@ -761,6 +772,11 @@ background: #1e1823;
     right: 24px;
     border: none;
     background-color: transparent;
+}
+.modal-icon-close {
+    stroke-width: 2px;
+        stroke: #111;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-title {
     font-weight: 600;
@@ -784,6 +800,7 @@ background: #1e1823;
     background-color: transparent;
     padding-left: 62px;
     outline: transparent;
+    
 }
 .modal-input:focus{
     border-color: #fd9222;
@@ -793,7 +810,10 @@ background: #1e1823;
 stroke: #fd9222;
 }
 .modal-input::placeholder{
-color: #111;
+font-weight: 400;
+font-size: 18px;
+letter-spacing: -0.02em;
+color: rgba(64, 64, 64, 0.3);
 }
 /* .modal-input:invalid {
     background-color: #fd9222;
@@ -815,12 +835,19 @@ color: #111;
 .modal-field-wrap {
     position: relative;
 }
+.text-comment {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: rgba(64, 64, 64, 0.3);
+    
+}
 .modal-icon {
     fill: transparent;
     stroke: #111;
     left: 24px;
     position: absolute;
-    top: 50%;
+    top: 33%;
     transform: translateY(-50% -50%);
 }
 .modal-text {
@@ -830,4 +857,108 @@ color: #111;
     border-radius: 13px;
     padding: 22px 24px ;
     resize: none;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    color: rgba(64, 64, 64, 0.3);
+    margin-top: 8px;
+}
+.modal-text:focus,
+.modal-text:hover {
+    border: 1.50px solid #fd9222;
+}
+.modal-check {
+
+}
+.modal-check:checked + .modal-check-text span {
+    background-color: #fd9222;
+    border: none;
+    fill: #fff;
+
+}
+.modal-check-text {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: rgba(64, 64, 64, 0.6);
+
+}
+.modal-check-text span {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(17, 17, 17, 0.14);
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+.privacy-policy {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: rgba(64, 64, 64, 0.6);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fd9222;
+}
+.modal-btn {
+display: block;
+align-items: start;
+border-radius: 100px;
+border:none;
+padding: 14px 40px;
+width: 117px;
+height: 45px;
+background-color: #fd9222;
+font-weight: 600;
+font-size: 14px;
+color: #fff;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover,
+.modal-btn:focus {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px){
+    .container {
+        width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+        }
+
+
+    .benefits {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        }
+    
+    .benefits-list {
+        gap: 44px 88px;
+        }
+    
+    .benefits-item {
+        padding-right: 0;
+        width: calc((100% - 88px) / 2);
+        }
+}
+
+@media screen and (min-width: 1200px){
+    .container {
+        width: 1166px;
+        padding-left: 15px;
+        padding-right: 15px;
+        }
+    .benefits-item {
+         width: calc((100% - 2 * 88px) / 3);
+        position: relative;
+}
+.benefits-list {
+    padding: 0 18px;
+    gap: 88px;
+}
+
 }

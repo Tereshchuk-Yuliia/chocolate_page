@@ -44,21 +44,31 @@
         </section>
         <section class="benefits">
             <div class="container">
+                
                 <h2 class="visually-hidden">benefits</h2>
                 <ul class="benefits-list">
                 <li class="benefits-item current">
+                    <svg class="benefits-icon" width="32" height="32">
+                        <use href="./images/icons.svg#icon-chocolate-bar"></use>
+                    </svg>
                     <h3 class="benefits-subtitle">Unsurpassed taste</h3>
                     <p class="benefits-item-text">Crafted with the finest quality cocoa beans and a dedication to perfection, each bite is a decadent experience that
                     simply cannot be matched. Savor the richness and complexity of our Unsurpassed Taste and discover a new level of
                     chocolate bliss.</p>
                 </li>
                 <li class="benefits-item current">
+                    <svg class="benefits-icon" width="32" height="32">
+                        <use href="./images/icons.svg#icon-Coin"></use>
+                    </svg>
                     <h3 class="benefits-subtitle">Affordable price</h3>
                     <p class="benefits-item-text">Indulge in high-quality chocolate without breaking the bank with Simply Chocolate's selection of affordable treats.
                     Enjoy mouth-watering truffles and velvety chocolate bars without sacrificing taste or quality. Browse our selection and
                     indulge in affordable luxury today.</p>
                 </li>
                 <li class="benefits-item">
+                    <svg class="benefits-icon" width="32" height="32">
+                        <use href="./images/icons.svg#icon-spoon"></use>
+                    </svg>
                     <h3 class="benefits-subtitle">Own production</h3>
                     <p class="benefits-item-text">We take pride in our own production process, ensuring that every step is carefully crafted to perfection. From selecting
                     the finest ingredients to handcrafting each piece, our attention to detail is evident in every bite.</p>
@@ -276,9 +286,13 @@
                 </div>
 </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-open">
         <div class="modal">
-            <button type="button" class="modal-close">x</button>
+            <button type="button" class="modal-close">
+                <svg class="modal-icon-close"width="16" height="16">
+                <use href="./images/icons.svg#icon-x-close"></use>
+                </svg>
+        </button>
             <p class="modal-title title">LEAVE A REVIEW ABOUT <span class="title-colored">OUR CHOCOLATE</span></p>
         <form class="modal-form">
             <div class="modal-field">
@@ -286,15 +300,40 @@
                 <div class="modal-field-wrap">
                     <input type="text" name="user-name" class="modal-input" placeholder="Enter name" required>
                     <svg class="modal-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-user-1"></use>
+                        <use href="./images/icons.svg#icon-user-2"></use>
                     </svg>
                 </div>
             </div>
-            <input type="email" name="user-email" class="modal-input" placeholder="Enter email">
-            <input type="tel" name="user-tel" class="modal-input" placeholder="Enter tel" required >
             <div class="modal-field">
-                <label for="user-coment">Comment</label>
+                <label for="user-email" class="modal-label">Email</label>
+                <div class="modal-field-wrap">
+                    <input type="email" name="user-email" class="modal-input" placeholder="Enter email">
+                    <svg class="modal-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-field">
+                <label for="user-tel" class="modal-label">Phone number</label>
+                <div class="modal-field-wrap">
+                    <input type="tel" name="user-tel" class="modal-input" placeholder="Enter tel" required >
+                    <svg class="modal-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-Vector"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal-field">
+                <label for="user-coment" class="text-comment">Comment</label>
             <textarea name="user-coment" id="user-comen" class="modal-text" placeholder="Enter text"></textarea>
+            </div>
+            <div class="modal-field">
+                <input type="checkbox" name="policy" id="policy" value="true" class="modal-check visually-hidden">
+                <label for="policy" class="modal-check-text">
+                    <span>
+                        <svg class="check-icon" width="10" height="10">
+                            <use href="./images/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>I accept the terms and conditions of the <a href="" class="privacy-policy">Privacy Policy</a></label>
             </div>
             <button type="submit" class="modal-btn">Send</button>
         </form>
