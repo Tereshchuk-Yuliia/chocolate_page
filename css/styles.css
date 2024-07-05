@@ -150,24 +150,31 @@ button {
 }
 .hero-container {
     background-color: rgba(17, 17, 17, 0.6);
-    background-image: url(../images/chocolate_main.jpg);
+    background-image: url(../images/chocolate_mob1x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 30px;
-    padding: 380px 40px 40px 40px;
+    padding: 395px 20px 20px 20px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:2), (min-resolution: 2dppx), (min-resolution: 192pdi){
+    .hero-container {
+    background-color: rgba(17, 17, 17, 0.6);
+    background-image: url(../images/chocolate_mob2x.jpg);
+    }
 }
 .hero-title {
     font-weight: 500;
-    font-size: 28px;
-    line-height: 1.21;
+    font-size: 20px;
+    line-height: 1.2;
     letter-spacing: -0.03em;
     color: #fff;
     margin-bottom: 32px;
-    max-width: 484px;
+    max-width: 295px;
 }
 .hero-buttons {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 .hero-btn {
@@ -177,7 +184,8 @@ button {
     background: #fd9222;
     border-radius: 100px;
     border: none;
-    padding: 14px 40px;
+    padding: 12px 28px;
+    /* padding: 14px 40px; */
     margin-right: 14px;
 }
 .hero-btn:hover,
@@ -193,7 +201,8 @@ button {
     border: 1px solid #fff;
     background-color: transparent;
     border-radius: 100px;
-    padding: 14px 40px;
+    /* padding: 14px 40px; */
+    padding: 12px 28px;
 }
 .hero-link:hover,
 .hero-link:focus {
@@ -202,7 +211,8 @@ button {
     border: 1px solid #fd9222;
     background-color: #fff;
     border-radius: 100px;
-    padding: 14px 40px;
+    padding: 12px 28px;
+    /* padding: 14px 40px; */
 
 }
 .hero-scroll {
@@ -211,11 +221,12 @@ button {
     line-height: 1.28;
     letter-spacing: -0.03em;
     color: #fff;
-    margin-left: auto;
+    margin-top: 32px;
+    /* margin-left: auto; */
 }
 .hero-scroll:hover,
 .hero-scroll:focus {
-font-size: 14px;
+    font-size: 14px;
     line-height: 1.28571;
     letter-spacing: -0.03em;
     color: #fd9222;
@@ -345,12 +356,10 @@ font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: #fff;
 }
 .taste-item:nth-child(4n+3) {
-background: #1e1823;
+background-color: #1e1823;
 }
-
 .taste-image {
     margin: 0 auto;
     margin-bottom: 36px;
@@ -362,9 +371,14 @@ background: #1e1823;
     letter-spacing: -0.02em;
     color: #111;
 }
+.taste-subtitle:nth-child(4n+3) {
+    color: #fff;
+}
+.taste-subtitle:nth-child(4n+1) {
+    color: #fff;
+}
 /* _______made_____ */
 .made {
-    padding-top: 120px;
     background-color: #fafafa;
 }
 
@@ -534,8 +548,6 @@ background: #1e1823;
     border-top: none;
     border-radius: 0 0 15px 15px;
 }
-
-
 /* _________reviews_____ */
 
 .reviews {
@@ -929,8 +941,38 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         padding-left: 32px;
         padding-right: 32px;
         }
-
-
+    .hero {
+        padding-bottom: 40px;
+        }
+    .hero-container {
+        background-image: url(../images/chocolate_tab1x.jpg);
+        padding: 380px 40px 40px 40px;
+        }
+        @media screen and (-webkit-min-device-pixel-ratio:2),
+        (min-resolution: 2dppx),
+        (min-resolution: 192pdi) {
+    .hero-container {
+        background-color: rgba(17, 17, 17, 0.6);
+        background-image: url(../images/chocolate_tab2x.jpg);
+        }
+        }
+    .hero-title {
+        font-size: 28px;
+        max-width: 484px;
+        }
+    .hero-btn {
+    padding: 14px 40px;
+        }
+    .hero-link{
+    padding: 14px 40px;
+        }
+    .hero-link:hover,
+    .hero-link:focus{
+        padding: 14px 40px;
+    }
+    .hero-scroll{
+    margin-left: auto;
+        }
     .benefits {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -945,15 +987,47 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         width: calc((100% - 88px) / 2);
         }
 }
-
 @media screen and (min-width: 1200px){
     .container {
         width: 1166px;
         padding-left: 15px;
         padding-right: 15px;
         }
+    .hero-container {
+        background-image: url(../images/chocolate_desk1x.jpg);
+        padding: 380px 40px 40px 40px;
+        }
+    @media screen and (-webkit-min-device-pixel-ratio:2),
+        (min-resolution: 2dppx),
+        (min-resolution: 192pdi) {
+    .hero-container {
+        background-color: rgba(17, 17, 17, 0.6);
+        background-image: url(../images/chocolate_desk2x.jpg);
+            }
+        }
+    .hero-title {
+        font-size: 28px;
+        max-width: 484px;
+        }
+            
+    .hero-btn {
+        padding: 14px 40px;
+        }
+            
+    .hero-link {
+        padding: 14px 40px;
+        }
+            
+    .hero-link:hover,
+    .hero-link:focus {
+        padding: 14px 40px;
+        }
+            
+    .hero-scroll {
+        margin-left: auto;
+        }
     .benefits-item {
-         width: calc((100% - 2 * 88px) / 3);
+        width: calc((100% - 2 * 88px) / 3);
         position: relative;
 }
 .benefits-list {
